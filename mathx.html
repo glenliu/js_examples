@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>hehe</title>
+</head>
+<body>
+<div id="question">
+	<form id="form1" action="" target="_self">
+ 		<input id="num1" type="text" value="7" name="num1">
+		<input id="num2" type="text" value="3" name="num2">
+		<input type="submit" value="start" onclick="drawInRect()"/>
+	</form> 
+	<iframe style="display:none" id="rfFrame"  name="rfFrame" src="about:blank"></iframe>
+</div>
+
+<div id="anim">
+
+	<canvas id="myCanvas" width="400" height="400" style="background-color:yellow;"></canvas>
+
+	<script type="text/javascript" language="javascript" >	
+	function drawInRect(){
+		document.forms[0].target="rfFrame";
+		var num1 = document.getElementById("num1").value;
+		var num2 = document.getElementById("num2").value;
+		var c=document.getElementById("myCanvas");
+		var cxt=c.getContext("2d");
+		cxt.fillStyle="#559933";
+		cxt.clearRect(1,1,400,400);
+		for (var i=0;i<num1;i++){
+			for (var j=num2;j>0;j--){
+				cxt.fillRect(i*40,j*40,30,30);
+			}
+		}
+	}
+	</script>
+</div>
+
+
+</body>
+</html>

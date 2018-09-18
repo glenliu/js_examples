@@ -1,0 +1,20 @@
+<html>
+  <body>
+
+    <canvas id="myCanvas" width="400" height="400" style="border:1px solid #c3c3c3;">
+		Your browser does not support the canvas element.
+    </canvas>
+	
+    <script type="text/javascript">
+       var c=document.getElementById("myCanvas");
+       var cxt=c.getContext("2d");
+       
+       for (var i=0;i<360;i++)
+       {
+          cxt.lineTo(100*(1-Math.sin(i*Math.PI/180))*Math.cos(i)+200,100*(1-Math.sin(i))*Math.sin(i*Math.PI/180)+200);
+       }
+       cxt.stroke();
+    </script>
+	
+  </body>
+</html>

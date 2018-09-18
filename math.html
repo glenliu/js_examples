@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" language="javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" language="javascript" src="js/underscore.js"></script>
+
+<title>加减乘除魔法</title>
+<link rel="stylesheet" type="text/css" href="css/my.css">
+</head>
+<div id="question">
+	<form id="form1" action="" target="rfFrame">
+	<input id="num1" type="text" value="7" name="num1">
+	<select name="oprand">
+		<option value="+">+</optioin>
+	    <option value="-">-</optioin>
+	    <option value="X">X</optioin>
+	    <option value="/" selected="selected">/</optioin>
+	</select>
+	<input id="num2" type="text" value="3" name="num2">
+	<input type="submit" value="start" onclick="divide_magic()"/>
+	</form>
+
+	<iframe style="display:none" id="rfFrame" name="rfFrame" src="about:blank"></iframe>
+</div>
+
+<div id="anim">
+<!-- 	<table>
+		<tr><td>10</td><td>10</td><td>10</td><td>10</td><td>10</td></tr>
+		<tr><td>9</td><td>9</td><td>9</td><td>9</td><td>9</td></tr>
+	<script type="text/template" id="tbl_tmpl">
+
+
+	</script>
+	</table> -->
+
+	<canvas id="myCanvas" width="800" height="600"></canvas>
+
+</div>
+
+<div id="result">
+	<div id="res1"><p id="pres1"></p></div>
+	<div id="res2"><p id="pres2"></p></div>
+	<div id="count"><p id="pcount"></p></div>
+		<script type="text/javascript" language="javascript" src="js/mathanim.js"></script> 
+</div>
+
+<body>
+</body>
+</html>
